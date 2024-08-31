@@ -1,7 +1,7 @@
 import React, { useEffect, useRef, useState } from 'react';
 import { useNavigate } from 'react-router-dom';
 
-import { putUser } from 'apis/putUser';
+import { putUser } from 'apis/user/putUser';
 import defaultProfilePicture from 'assets/img/common/user.png';
 import searchIcon from 'assets/img/line(2)/search.svg';
 import { TextInput, BottomBtn } from 'components';

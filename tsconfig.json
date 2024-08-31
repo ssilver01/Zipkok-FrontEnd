@@ -18,5 +18,5 @@
     "baseUrl": "./src",
     "types": ["kakao.maps.d.ts", "node"]
   },
-  "include": ["src"]
+  "include": ["src", "keys.ts"]
 }
