@@ -12,8 +12,8 @@ import NearHome from './NearHome';
 import styles from './WriteKok.module.css';
 import Compass from '../Compass';
 
-import type { KokConfigResult } from 'apis/getKokConfig';
-import type { UserKokOption } from 'apis/getUserKokOption';
+import type { KokConfigResult } from 'apis/kok/getKokConfig';
+import type { UserKokOption } from 'apis/user/getUserKokOption';
 
 export default function WriteKok() {
   // kokId가 undefined이면 realEstateId에 해당하는 매물의 새로운 콕리스트 등록

@@ -11,7 +11,7 @@ import Inner from './components/Inner';
 import Outer from './components/Outer';
 import styles from './KokEdit.module.css';
 
-import type { UserKokOption } from 'apis/getUserKokOption';
+import type { UserKokOption } from 'apis/user/getUserKokOption';
 import type { KokOption } from 'types/KokOption';
 
 const KokEdit = () => {

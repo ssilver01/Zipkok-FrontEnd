@@ -7,7 +7,7 @@ import useUIStore from 'contexts/uiStore';
 
 import styles from './LikedProperties.module.css';
 
-import type { RealEstate } from 'apis/getZim';
+import type { RealEstate } from 'apis/zim/getZim';
 
 const LikedProperties = () => {
   const [properties, setProperties] = useState<RealEstate[]>([]);

@@ -5,7 +5,7 @@ import { getRealEstateInfo } from 'apis';
 import { quit } from 'assets/img/line(2)/quit.svg';
 import { BottomBtn, PropertyComponents as Property } from 'components';
 
-import type { GetRealEstateInfoResult } from 'apis/getRealEstateInfo';
+import type { GetRealEstateInfoResult } from 'apis/realestate/getRealEstateInfo';
 
 export default function Confirm() {
   const [realEstateInfo, setRealEstateInfo] =

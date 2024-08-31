@@ -9,8 +9,8 @@ import useUIStore from 'contexts/uiStore';
 
 import styles from './KokReview.module.css';
 
-import type { KokConfigResult } from 'apis/getKokConfig';
-import type { KokReview } from 'apis/getKokReview';
+import type { KokConfigResult } from 'apis/kok/getKokConfig';
+import type { KokReview } from 'apis/kok/getKokReview';
 
 const Tags = [
   '깔끔해요',

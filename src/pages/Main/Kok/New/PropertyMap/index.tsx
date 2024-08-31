@@ -1,7 +1,10 @@
 import React, { useEffect, useState } from 'react';
 import { useNavigate } from 'react-router-dom';
 
-import { MapRealEstate, getMapRealEstate } from 'apis/getMapRealEstate';
+import {
+  MapRealEstate,
+  getMapRealEstate,
+} from 'apis/realestate/getMapRealEstate';
 import { PropertyItem } from 'components';
 import useAddressStore from 'contexts/addressStore';
 import useUIStore from 'contexts/uiStore';

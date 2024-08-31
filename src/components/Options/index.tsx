@@ -5,7 +5,7 @@ import checkImg from 'assets/img/check/check_selected.svg';
 
 import styles from './Options.module.css';
 
-import type { UserKokOption } from 'apis/getUserKokOption';
+import type { UserKokOption } from 'apis/user/getUserKokOption';
 
 interface OptionsComponentProps {
   kokOptions: UserKokOption[];

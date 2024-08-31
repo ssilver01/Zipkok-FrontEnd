@@ -10,11 +10,11 @@ import {
 } from 'apis';
 import { zim } from 'apis';
 import { deleteZim } from 'apis';
-import { KokContract } from 'apis/getKokContract';
-import { KokDetail } from 'apis/getKokDetail';
-import { KokInner } from 'apis/getKokInner';
-import { KokOuter } from 'apis/getKokOuter';
-import { KokReview } from 'apis/getKokReview';
+import { KokContract } from 'apis/kok/getKokContract';
+import { KokDetail } from 'apis/kok/getKokDetail';
+import { KokInner } from 'apis/kok/getKokInner';
+import { KokOuter } from 'apis/kok/getKokOuter';
+import { KokReview } from 'apis/kok/getKokReview';
 import { PropertyComponents as Property, BottomBtn } from 'components';
 import useModal from 'contexts/modalStore';
 import useUIStore from 'contexts/uiStore';
@@ -28,7 +28,7 @@ import heart from '../../../../assets/img/line(2)/heart.svg';
 import 'swiper/css';
 import 'swiper/css/pagination';
 
-import type { UserKokOption } from 'apis/getUserKokOption';
+import type { UserKokOption } from 'apis/user/getUserKokOption';
 import type { Address } from 'types/Address';
 import type { HouseType } from 'types/HouseType';
 

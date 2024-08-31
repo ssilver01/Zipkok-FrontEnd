@@ -3,7 +3,7 @@ import InfiniteScroll from 'react-infinite-scroll-component';
 import { useNavigate } from 'react-router-dom';
 
 import { getUserKokList } from 'apis';
-import { UserKokList } from 'apis/getUserKokList';
+import { UserKokList } from 'apis/user/getUserKokList';
 import checkIcon from 'assets/img/line(2)/check.svg';
 import listIcon from 'assets/img/line(2)/list_default.svg';
 import { ReactComponent as PenIcon } from 'assets/img/line(2)/pen_white.svg';
