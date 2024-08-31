@@ -1,7 +1,7 @@
 import api from '../';
 
 import type { UserKokOption } from './getUserKokOption';
-import type { ZipkokResponse } from 'types/ZipkokResponse';
+import type { ZipkokResponse } from 'interface/ZipkokResponse';
 
 interface KokOption<T> {
   highlights: string[];

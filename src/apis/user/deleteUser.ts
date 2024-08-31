@@ -1,6 +1,6 @@
 import api from '../';
 
-import type { ZipkokResponse } from 'types/ZipkokResponse';
+import type { ZipkokResponse } from 'interface/ZipkokResponse';
 
 /**
  * `DELETE /user`로 회원 탈퇴를 요청합니다.

@@ -9,7 +9,7 @@ import useAddressSearch from 'hooks/useAddressSearch';
 import RecentAddress from './components/RecentAddress';
 import styles from './Search.module.css';
 
-import type { Address } from 'types/Address';
+import type { Address } from 'interface/Address';
 
 export interface AddressHistory {
   id: number;

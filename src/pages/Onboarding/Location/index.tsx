@@ -1,7 +1,7 @@
 import React from 'react';
 
 import { AddressSearchPage } from 'components';
-import { Address } from 'types/Address';
+import { Address } from 'interface/Address';
 
 interface LocationProps {
   confirmLocation: (location: Address) => void;

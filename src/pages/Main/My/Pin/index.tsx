@@ -9,7 +9,7 @@ import useUIStore from 'contexts/uiStore';
 import styles from './Pin.module.css';
 
 import type { PinResult } from 'apis/pin/getPin';
-import type { Pin } from 'types/Pin';
+import type { Pin } from 'interface/Pin';
 
 export default function Pin() {
   const ui = useUIStore();

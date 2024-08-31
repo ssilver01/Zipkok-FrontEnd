@@ -9,7 +9,7 @@ import useAddressSearch from 'hooks/useAddressSearch';
 
 import styles from './PropertyList.module.css';
 
-import type { Address } from 'types/Address';
+import type { Address } from 'interface/Address';
 
 export default function PropertyList() {
   const { setAddress, resetSrc } = useAddressStore();

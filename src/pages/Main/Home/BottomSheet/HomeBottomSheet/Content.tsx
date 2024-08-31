@@ -3,7 +3,6 @@ import { useNavigate } from 'react-router-dom';
 
 import homeIcon from 'assets/img/line(2)/home_default.svg';
 import { PropertyItem } from 'components';
-import properties from 'models/properties';
 
 import { realEstateInfo } from '../../KakaoMap';
 import styles from '../BottomSheet.module.css';

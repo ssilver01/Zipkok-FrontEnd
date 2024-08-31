@@ -3,7 +3,7 @@ import React from 'react';
 import OptionContainer from './OptionContainer';
 import styles from '../KokEdit.module.css';
 
-import type { KokOption } from 'types/KokOption';
+import type { KokOption } from 'interface/KokOption';
 
 interface InnerProps {
   options: KokOption[];

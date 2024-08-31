@@ -1,8 +1,8 @@
 import Cookies from 'js-cookie';
 import storeNewTokensToCookie from 'utils/storeNewTokensToCookie';
 
-import type { UserInfo } from 'types/UserInfo';
-import type { ZipkokResponse } from 'types/ZipkokResponse';
+import type { UserInfo } from 'interface/UserInfo';
+import type { ZipkokResponse } from 'interface/ZipkokResponse';
 
 type User = Omit<UserInfo, 'imageUrl'>;
 

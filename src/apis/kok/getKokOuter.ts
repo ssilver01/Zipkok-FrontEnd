@@ -1,6 +1,6 @@
 import api from '../';
 
-import type { ZipkokResponse } from 'types/ZipkokResponse';
+import type { ZipkokResponse } from 'interface/ZipkokResponse';
 
 export interface KokOuter {
   hilights: string[];

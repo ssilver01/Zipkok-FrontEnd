@@ -1,6 +1,6 @@
 import api from '../';
 
-import type { ZipkokResponse } from 'types/ZipkokResponse';
+import type { ZipkokResponse } from 'interface/ZipkokResponse';
 
 /**
  * `POST /zim`으로 매물 찜을 요청합니다.

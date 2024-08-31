@@ -12,7 +12,7 @@ import Outer from './components/Outer';
 import styles from './KokEdit.module.css';
 
 import type { UserKokOption } from 'apis/user/getUserKokOption';
-import type { KokOption } from 'types/KokOption';
+import type { KokOption } from 'interface/KokOption';
 
 const KokEdit = () => {
   const ui = useUIStore();

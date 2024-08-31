@@ -29,7 +29,7 @@ import 'swiper/css';
 import 'swiper/css/pagination';
 
 import type { UserKokOption } from 'apis/user/getUserKokOption';
-import type { Address } from 'types/Address';
+import type { Address } from 'interface/Address';
 import type { HouseType } from 'types/HouseType';
 
 interface RawOption {

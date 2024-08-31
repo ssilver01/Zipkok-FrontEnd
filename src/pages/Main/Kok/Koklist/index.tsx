@@ -10,7 +10,6 @@ import { ReactComponent as PenIcon } from 'assets/img/line(2)/pen_white.svg';
 import { BottomBtn, PropertyItem } from 'components';
 import useCustomKokStore from 'contexts/customKokStore';
 import useUIStore from 'contexts/uiStore';
-import properties from 'models/properties';
 import { StatusCode } from 'types/StatusCode';
 
 import styles from './Kok.module.css';
