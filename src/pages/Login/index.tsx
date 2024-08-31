@@ -17,7 +17,7 @@ export default function Login() {
 
   function handleLogin() {
     window.location.href =
-      'https://kauth.kakao.com/oauth/authorize?client_id=f251abb4b1d323c283685a7be4211aa4&redirect_uri=https://zipkok.store/auth&response_type=code';
+      'http://kauth.kakao.com/oauth/authorize?client_id=f251abb4b1d323c283685a7be4211aa4&redirect_uri=https://http://192.168.0.53:9000/auth&response_type=code';
   }
 
   return (
