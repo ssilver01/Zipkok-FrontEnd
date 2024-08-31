@@ -4,7 +4,7 @@ import { useNavigate } from 'react-router-dom';
 import searchIcon from 'assets/img/line(2)/search.svg';
 import { BottomBtn } from 'components';
 import useAddressSearch from 'hooks/useAddressSearch';
-import { Address } from 'types/Address';
+import { Address } from 'interface/Address';
 
 import styles from './AddressSearchPage.module.css';
 

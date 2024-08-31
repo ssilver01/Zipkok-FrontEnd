@@ -7,8 +7,8 @@ import useUIStore from 'contexts/uiStore';
 import { Address as AddressPage, Map, Name } from './components';
 import styles from './Write.module.css';
 
-import type { Address } from 'types/Address';
-import type { Pin } from 'types/Pin';
+import type { Address } from 'interface/Address';
+import type { Pin } from 'interface/Pin';
 
 type PinWithoutId = Omit<Pin, 'id'>;
 export type Step = 'address' | 'map' | 'name';

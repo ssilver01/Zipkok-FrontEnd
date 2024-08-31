@@ -1,7 +1,7 @@
 import api from '../';
 
-import type { Address } from 'types/Address';
-import type { ZipkokResponse } from 'types/ZipkokResponse';
+import type { Address } from 'interface/Address';
+import type { ZipkokResponse } from 'interface/ZipkokResponse';
 
 interface RawAddress {
   address_name: string;

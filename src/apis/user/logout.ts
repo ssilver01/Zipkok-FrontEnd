@@ -1,6 +1,6 @@
 import api from '../';
 
-import type { ZipkokResponse } from 'types/ZipkokResponse';
+import type { ZipkokResponse } from 'interface/ZipkokResponse';
 
 /**
  * `GET /user/logout`으로 로그아웃을 요청합니다.

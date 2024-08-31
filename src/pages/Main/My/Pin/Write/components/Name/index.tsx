@@ -4,7 +4,7 @@ import { TextInput, BottomBtn } from 'components';
 
 import styles from './Name.module.css';
 
-import type { Pin } from 'types/Pin';
+import type { Pin } from 'interface/Pin';
 
 type PinWithoutId = Omit<Pin, 'id'>;
 

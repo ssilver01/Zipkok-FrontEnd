@@ -5,7 +5,7 @@ import styles from './OptionContainer.module.css';
 import DetailOption from '../DetailOption';
 import Option from '../Option';
 
-import type { KokOption } from 'types/KokOption';
+import type { KokOption } from 'interface/KokOption';
 
 interface OptionContainerProps {
   options: KokOption[];

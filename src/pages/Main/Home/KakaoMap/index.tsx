@@ -9,8 +9,8 @@ import spot from 'assets/img/pinIcon/spot.svg';
 
 import styles from './KakaoMap.module.css';
 
+import type { Pin } from 'interface/Pin';
 import type { HouseType } from 'types/HouseType';
-import type { Pin } from 'types/Pin';
 import type { PriceType } from 'types/PriceType';
 
 declare global {

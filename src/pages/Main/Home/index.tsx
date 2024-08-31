@@ -19,7 +19,7 @@ import styles from './Home.module.css';
 import KakaoMap, { realEstateInfo } from './KakaoMap';
 
 import type { PinResult } from 'apis/getPin';
-import type { Pin } from 'types/Pin';
+import type { Pin } from 'interface/Pin';
 
 interface mapLocationInfo {
   southWestLat?: number;

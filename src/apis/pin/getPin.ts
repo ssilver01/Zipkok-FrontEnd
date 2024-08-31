@@ -1,7 +1,7 @@
 import api from '../';
 
-import type { Pin } from 'types/Pin';
-import type { ZipkokResponse } from 'types/ZipkokResponse';
+import type { Pin } from 'interface/Pin';
+import type { ZipkokResponse } from 'interface/ZipkokResponse';
 
 export interface PinResult {
   pinList: Pin[];

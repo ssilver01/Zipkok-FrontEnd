@@ -1,7 +1,7 @@
 import api from '..';
 
-import type { ZipkokResponse } from 'types/ZipkokResponse';
-
+import type { Pin } from 'interface/Pin';
+import type { ZipkokResponse } from 'interface/ZipkokResponse';
 /**
  * `DELETE /pin`으로 핀 삭제를 요청합니다.
  */

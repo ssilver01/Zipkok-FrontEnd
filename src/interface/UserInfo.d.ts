@@ -1,5 +1,5 @@
-import type { HouseType } from './HouseType';
-import type { PriceType } from './PriceType';
+import type { HouseType } from '../types/HouseType';
+import type { PriceType } from '../types/PriceType';
 
 interface UserInfo {
   imageUrl: string | null;

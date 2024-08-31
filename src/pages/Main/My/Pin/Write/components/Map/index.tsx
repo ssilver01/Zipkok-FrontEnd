@@ -6,7 +6,7 @@ import { BottomBtn } from 'components';
 import KakaoMap, { KakaoMapRef } from './KakaoMap';
 import styles from './Map.module.css';
 
-import type { Address } from 'types/Address';
+import type { Address } from 'interface/Address';
 
 interface MapProps {
   confirmLocation: (location: Address) => void;

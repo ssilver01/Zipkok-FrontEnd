@@ -1,6 +1,6 @@
 import { create } from 'zustand';
 
-import type { Address } from 'types/Address';
+import type { Address } from 'interface/Address';
 
 export interface AddressStore {
   address: Address;

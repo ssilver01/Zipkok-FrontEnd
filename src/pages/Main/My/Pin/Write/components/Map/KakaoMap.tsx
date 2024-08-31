@@ -9,7 +9,7 @@ import markerIcon from 'assets/img/pinIcon/pin.svg';
 
 import styles from './Map.module.css';
 
-import type { Address } from 'types/Address';
+import type { Address } from 'interface/Address';
 
 declare global {
   interface Window {

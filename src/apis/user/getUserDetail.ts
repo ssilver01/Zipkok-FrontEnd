@@ -1,11 +1,11 @@
-import { Address } from 'types/Address';
+import { Address } from 'interface/Address';
 
 import api from '../';
 
+import type { ZipkokResponse } from 'interface/ZipkokResponse';
 import type { Gender } from 'pages/SignIn';
 import type { HouseType } from 'types/HouseType';
 import type { PriceType } from 'types/PriceType';
-import type { ZipkokResponse } from 'types/ZipkokResponse';
 
 export interface UserDetail {
   imageUrl: string;
