@@ -19,9 +19,9 @@ import Monthly from '../../../Onboarding/Price/priceSlider/Monthly';
 import Purchase from '../../../Onboarding/Price/priceSlider/Purchase';
 import { Gender } from '../../../SignIn';
 
+import type { UserInfo } from 'interface/UserInfo';
 import type { HouseType } from 'types/HouseType';
 import type { PriceType } from 'types/PriceType';
-import type { UserInfo } from 'types/UserInfo';
 
 type UserInfoInput = Omit<UserInfo, 'imageUrl'>;
 

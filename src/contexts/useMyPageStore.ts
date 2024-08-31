@@ -2,10 +2,10 @@ import isLoggedIn from 'utils/isLoggedIn';
 import { create } from 'zustand';
 import { persist } from 'zustand/middleware';
 
+import type { UserInfo } from 'interface/UserInfo';
 import type { Gender } from 'pages/SignIn';
 import type { HouseType } from 'types/HouseType';
 import type { PriceType } from 'types/PriceType';
-import type { UserInfo } from 'types/UserInfo';
 
 type MyPageInfo = UserInfo & {
   setImageUrl: (imageUrl?: string) => void;

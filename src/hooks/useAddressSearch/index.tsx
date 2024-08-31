@@ -3,7 +3,7 @@ import BarLoader from 'react-spinners/BarLoader';
 
 import { searchAddress } from 'apis';
 import { TextInput } from 'components';
-import { Address } from 'types/Address';
+import { Address } from 'interface/Address';
 import { StatusCode } from 'types/StatusCode';
 
 import { AddressContainer } from './components';

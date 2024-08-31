@@ -11,7 +11,7 @@ import convertHouseTypeToString from 'utils/convertHouseTypeToString';
 import styles from './BasicInfo.module.css';
 import IconBtn from '../../IconBtn';
 
-import type { Address } from 'types/Address';
+import type { Address } from 'interface/Address';
 import type { HouseType } from 'types/HouseType';
 
 interface BasicInfoProps {

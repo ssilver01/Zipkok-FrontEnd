@@ -7,7 +7,7 @@ import useAddressSearch from 'hooks/useAddressSearch';
 
 import styles from './Address.module.css';
 
-import type { Address } from 'types/Address';
+import type { Address } from 'interface/Address';
 
 interface AddressProps {
   confirmLocation: (location: Address) => void;

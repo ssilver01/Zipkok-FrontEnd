@@ -9,7 +9,7 @@ import getPriceString from 'utils/getPriceString';
 
 import styles from './Header.module.css';
 
-import type { Address } from 'types/Address';
+import type { Address } from 'interface/Address';
 import type { PriceType } from 'types/PriceType';
 
 interface HeaderProps {

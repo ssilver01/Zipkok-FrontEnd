@@ -1,9 +1,8 @@
 import api from '.';
 
+import type { ZipkokResponse } from 'interface/ZipkokResponse';
 import type { HouseType } from 'types/HouseType';
 import type { PriceType } from 'types/PriceType';
-import type { ZipkokResponse } from 'interface/ZipkokResponse';
-
 export interface UserKokList {
   koks: {
     kokId: number;

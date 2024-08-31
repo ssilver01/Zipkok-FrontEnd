@@ -1,7 +1,7 @@
 import api from './';
 
-import type { Gender } from 'pages/SignIn';
 import type { ZipkokResponse } from 'interface/ZipkokResponse';
+import type { Gender } from 'pages/SignIn';
 
 interface SignInResult {
   accessToken: string;

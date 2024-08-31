@@ -14,7 +14,7 @@ import styles from './Onboarding.module.css';
 import Price from './Price';
 import Type from './Type';
 
-import type { Address } from 'types/Address';
+import type { Address } from 'interface/Address';
 import type { HouseType } from 'types/HouseType';
 import type { PriceType } from 'types/PriceType';
 

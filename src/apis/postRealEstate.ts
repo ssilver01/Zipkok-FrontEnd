@@ -1,8 +1,9 @@
 import api from 'apis';
 
+import type { ZipkokResponse } from 'interface/ZipkokResponse';
 import type { HouseType } from 'types/HouseType';
 import type { PriceType } from 'types/PriceType';
-import type { ZipkokResponse } from 'interface/ZipkokResponse';
+
 interface postRealEstateInfo {
   realEstateId: number;
 }
