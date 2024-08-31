@@ -1,6 +1,6 @@
 import api from 'apis';
 
-import type { ZipkokResponse } from 'types/ZipkokResponse';
+import type { ZipkokResponse } from 'interface/ZipkokResponse';
 
 /**
  * 메인에서 필터 설정 정보를 `PATCH /user`으로 전송합니다.

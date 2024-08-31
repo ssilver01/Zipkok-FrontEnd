@@ -5,7 +5,7 @@ import api from './';
 import type {
   ZipkokResponse,
   ZipkokResponseWithCode,
-} from 'types/ZipkokResponse';
+} from 'interface/ZipkokResponse';
 
 interface RefreshTokensResult {
   authTokens: {

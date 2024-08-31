@@ -2,7 +2,7 @@ import api from './';
 
 import type { HouseType } from 'types/HouseType';
 import type { PriceType } from 'types/PriceType';
-import type { ZipkokResponse } from 'types/ZipkokResponse';
+import type { ZipkokResponse } from 'interface/ZipkokResponse';
 
 /**
  * 온보딩 페이지에서 입력한 모든 정보를 `PATCH /user`으로 전송합니다.

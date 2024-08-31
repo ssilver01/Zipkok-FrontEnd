@@ -1,7 +1,7 @@
 import api from '.';
 
-import type { Pin } from 'types/Pin';
-import type { ZipkokResponse } from 'types/ZipkokResponse';
+import type { Pin } from 'interface/Pin';
+import type { ZipkokResponse } from 'interface/ZipkokResponse';
 
 /**
  * `PUT /pin`으로 핀 수정을 요청합니다.

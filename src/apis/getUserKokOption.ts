@@ -1,7 +1,7 @@
 import api from '.';
 
-import type { KokOption } from 'types/KokOption';
-import type { ZipkokResponse } from 'types/ZipkokResponse';
+import type { KokOption } from 'interface/KokOption';
+import type { ZipkokResponse } from 'interface/ZipkokResponse';
 
 export type UserKokOption = Omit<KokOption, 'id'> & { optionId: number };
 

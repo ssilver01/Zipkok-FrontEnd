@@ -1,6 +1,6 @@
 import api from './';
 
-import type { ZipkokResponse } from 'types/ZipkokResponse';
+import type { ZipkokResponse } from 'interface/ZipkokResponse';
 
 /**
  * `DELETE /zim`으로 찜 취소를 요청합니다.

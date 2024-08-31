@@ -3,7 +3,7 @@ import api from 'apis';
 import type { Gender } from 'pages/SignIn';
 import type { HouseType } from 'types/HouseType';
 import type { PriceType } from 'types/PriceType';
-import type { ZipkokResponse } from 'types/ZipkokResponse';
+import type { ZipkokResponse } from 'interface/ZipkokResponse';
 
 export interface ProfileEditInfo {
   imageUrl: string;

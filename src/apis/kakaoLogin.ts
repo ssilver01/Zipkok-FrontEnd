@@ -1,4 +1,4 @@
-import { ZipkokResponse } from 'types/ZipkokResponse';
+import { ZipkokResponse } from 'interface/ZipkokResponse';
 
 import api from './';
 
