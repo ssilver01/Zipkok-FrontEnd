@@ -2,10 +2,8 @@ import React, { useEffect, useState, useLayoutEffect } from 'react';
 import { useNavigate } from 'react-router-dom';
 
 import { getPin } from 'apis';
-
 import { getMapRealEstate } from 'apis';
 import { MapRealEstate } from 'apis/realestate/getMapRealEstate';
-
 import pinIcon from 'assets/img/pinIcon/pin.svg';
 import { PropertyItem, BottomSheet } from 'components';
 import useAddressStore from 'contexts/addressStore';
