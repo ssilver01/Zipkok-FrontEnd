@@ -4,7 +4,6 @@ import { OptionsComponent, Furnitures, TextInput } from 'components';
 
 import styles from './Inner.module.css';
 
-// import type { UserKokOption } from 'apis/getUserKokOption';
 import type { UserKokOption } from 'apis/user/getUserKokOption';
 
 interface InnerProps {
