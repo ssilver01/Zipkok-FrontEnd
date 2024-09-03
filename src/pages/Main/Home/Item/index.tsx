@@ -3,8 +3,8 @@ import { useNavigate, useParams } from 'react-router-dom';
 
 import { zim } from 'apis';
 import { deleteZim } from 'apis';
-import { GetRealEstateInfoResult } from 'apis/getRealEstateInfo';
-import { getRealEstateInfo } from 'apis/getRealEstateInfo';
+import { GetRealEstateInfoResult } from 'apis/realestate/getRealEstateInfo';
+import { getRealEstateInfo } from 'apis/realestate/getRealEstateInfo';
 import { BottomBtn } from 'components';
 import Property from 'components/Property';
 import useModal from 'contexts/modalStore';

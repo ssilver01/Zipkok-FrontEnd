@@ -6,7 +6,7 @@ import { Highlight, OptionsComponent } from 'components';
 
 import styles from './NearHome.module.css';
 
-import type { UserKokOption } from 'apis/getUserKokOption';
+import type { UserKokOption } from 'apis/user/getUserKokOption';
 
 interface NearHomeProps {
   pictures: string[];

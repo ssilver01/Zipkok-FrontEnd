@@ -6,8 +6,7 @@ import { OptionsComponent } from 'components';
 
 import styles from './Contract.module.css';
 
-import type { UserKokOption } from 'apis/getUserKokOption';
-
+import type { UserKokOption } from 'apis/user/getUserKokOption';
 interface ContractProps {
   pictures: string[];
   setPictures: React.Dispatch<React.SetStateAction<string[]>>;

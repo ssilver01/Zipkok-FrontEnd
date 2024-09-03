@@ -4,7 +4,7 @@ import { OptionsComponent } from 'components';
 
 import styles from './Outer.module.css';
 
-import type { UserKokOption } from 'apis/getUserKokOption';
+import type { UserKokOption } from 'apis/user/getUserKokOption';
 
 interface OuterProps {
   highlights: string[];

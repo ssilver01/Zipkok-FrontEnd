@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 
-import { patchUserFilter } from 'apis/patchUserFilter';
+import { patchUserFilter } from 'apis/user/patchUserFilter';
 import BottomBtn from 'components/BottomBtn';
 import useMyPageStore from 'contexts/useMyPageStore';
 import useRadioBtn from 'hooks/useRadioBtn';
