@@ -3,7 +3,6 @@ import { useNavigate } from 'react-router-dom';
 
 import { getPin } from 'apis';
 import { getMapRealEstate } from 'apis';
-import { PinResult } from 'apis/pin/getPin';
 import { MapRealEstate } from 'apis/realestate/getMapRealEstate';
 import pinIcon from 'assets/img/pinIcon/pin.svg';
 import { PropertyItem, BottomSheet } from 'components';
@@ -20,6 +19,7 @@ import { Filter, SearchBox } from './components';
 import styles from './Home.module.css';
 import KakaoMap, { realEstateInfo } from './KakaoMap';
 
+import type { PinResult } from 'apis/pin/getPin';
 import type { Pin } from 'interface/Pin';
 
 interface mapLocationInfo {
