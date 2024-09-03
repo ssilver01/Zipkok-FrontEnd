@@ -5,7 +5,6 @@ import { OptionsComponent, SwiperCom } from 'components';
 import styles from './Contract.module.css';
 
 import type { UserKokOption } from 'apis/user/getUserKokOption';
-
 interface ContractProps {
   options: UserKokOption[];
   setOptions?: React.Dispatch<React.SetStateAction<UserKokOption[]>>;

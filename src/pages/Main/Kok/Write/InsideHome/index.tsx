@@ -9,7 +9,6 @@ import { TextInput, OptionsComponent, Furnitures } from 'components';
 import styles from './InsideHome.module.css';
 
 import type { UserKokOption } from 'apis/user/getUserKokOption';
-
 interface InsideHomeProps {
   pictures: string[];
   setPictures: React.Dispatch<React.SetStateAction<string[]>>;
