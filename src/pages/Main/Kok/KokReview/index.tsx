@@ -33,6 +33,7 @@ export default function KokReview() {
 
   const realEstateId = new URLSearchParams(location.search).get('realEstateId');
   const kokId = new URLSearchParams(location.search).get('kokId');
+  const starRatingLabels = ['시설', '인프라', '구조', '분위기'];
 
   const ui = useUIStore();
   const modal = useModal();
@@ -209,66 +210,22 @@ export default function KokReview() {
             >
               매물은 어떠셨나요?
             </h1>
-            <StarRating
-              label="시설"
-              starCount={review?.facilityStarCount ?? 0}
-              setStarCount={(
-                starCount: number | ((prevState: number) => number),
-              ) =>
-                setReview((prev) => ({
-                  ...prev,
-                  facilityStarCount:
-                    typeof starCount === 'function'
-                      ? starCount(prev.facilityStarCount ?? 0)
-                      : starCount,
-                }))
-              }
-            />
-            <StarRating
-              label="인프라"
-              starCount={review?.infraStarCount ?? 0}
-              setStarCount={(
-                starCount: number | ((prevState: number) => number),
-              ) =>
-                setReview((prev) => ({
-                  ...prev,
-                  infraStarCount:
-                    typeof starCount === 'function'
-                      ? starCount(prev.infraStarCount ?? 0)
-                      : starCount,
-                }))
-              }
-            />
-            <StarRating
-              label="구조"
-              starCount={review?.structureStarCount ?? 0}
-              setStarCount={(
-                starCount: number | ((prevState: number) => number),
-              ) =>
-                setReview((prev) => ({
-                  ...prev,
-                  structureStarCount:
-                    typeof starCount === 'function'
-                      ? starCount(prev.structureStarCount ?? 0)
-                      : starCount,
-                }))
-              }
-            />
-            <StarRating
-              label="분위기"
-              starCount={review?.vibeStarCount ?? 0}
-              setStarCount={(
-                starCount: number | ((prevState: number) => number),
-              ) =>
-                setReview((prev) => ({
-                  ...prev,
-                  vibeStarCount:
-                    typeof starCount === 'function'
-                      ? starCount(prev.vibeStarCount ?? 0)
-                      : starCount,
-                }))
-              }
-            />
+            {starRatingLabels.map((label, index) => (
+              <StarRating
+                key={label}
+                label={label}
+                starCount={review[`${label}StarCount`] || 0}
+                setStarCount={(starCount) =>
+                  setReview((prev) => ({
+                    ...prev,
+                    [`${label}StarCount`]:
+                      typeof starCount === 'function'
+                        ? starCount(prev[`${label}StarCount`] || 0) //동적 문자열로 하려고 하면 컴파일 시점에 해당 속성이 존재하는지 알수 없다.
+                        : starCount,
+                  }))
+                }
+              />
+            ))}
           </div>
           <div className={styles.review}>
             <textarea

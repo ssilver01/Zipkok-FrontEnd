@@ -5,6 +5,7 @@ import type { HouseType } from 'types/HouseType';
 import type { PriceType } from 'types/PriceType';
 
 export interface KokReview {
+  [key: string]: any; // 동적 속성 허용
   impressions: string[];
   facilityStarCount: number;
   infraStarCount: number;
