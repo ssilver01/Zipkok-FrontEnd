@@ -10,6 +10,7 @@ import useUIStore from 'contexts/uiStore';
 import Tags from 'model/Review';
 
 import styles from './KokReview.module.css';
+import { saveKok } from './saveKok';
 
 import type { KokConfigResult } from 'apis/kok/getKokConfig';
 import type { KokReview } from 'apis/kok/getKokReview';
@@ -85,66 +86,16 @@ export default function KokReview() {
     const innerOptions = prepareOptions(kokConfig.innerOptions);
     const contractOptions = prepareOptions(kokConfig.contractOptions);
 
-    // 새 콕 작성
-    if (
-      (kokId === '' || kokId === null) &&
-      realEstateId !== '' &&
-      realEstateId !== null
-    )
-      postKok(
-        parseInt(realEstateId),
-        kokConfig.checkedHilights ?? [],
-        kokConfig.checkedFurnitureOptions ?? [],
-        ' ',
-        {
-          checkedImpressions: review.impressions,
-          facilityStarCount: review.facilityStarCount,
-          infraStarCount: review.infraStarCount,
-          structureStarCount: review.structureStarCount,
-          vibeStarCount: review.vibeStarCount,
-          reviewText: review.reviewText,
-        },
-        outerOptions,
-        innerOptions,
-        contractOptions,
-        pictureData,
-      ).then((res) => {
-        if (res.code === 7011) navigate('/kok/complete');
-        else
-          modal.open({
-            title: '콕리스트 등록 실패',
-            description: res.message,
-            primaryButton: '확인',
-          });
-      });
-    // 기존 콕 수정
-    else if (kokId !== null && kokId !== '')
-      putKok({
-        kokId: parseInt(kokId),
-        checkedHighlights: kokConfig.checkedHilights ?? [],
-        checkedFurnitureOptions: kokConfig.checkedFurnitureOptions ?? [],
-        direction: ' ',
-        checkedOuterOptions: outerOptions,
-        checkedInnerOptions: innerOptions,
-        checkedContractOptions: contractOptions,
-        files: pictureData,
-        reviewInfo: {
-          checkedImpressions: review?.impressions || [],
-          facilityStarCount: review?.facilityStarCount || 0,
-          infraStarCount: review?.infraStarCount || 0,
-          structureStarCount: review?.structureStarCount || 0,
-          vibeStarCount: review?.vibeStarCount || 0,
-          reviewText: review?.reviewText || '',
-        },
-      }).then((res) => {
-        if (res.code === 7014) navigate(`/kok/complete`);
-        else
-          modal.open({
-            title: '콕리스트 수정 실패',
-            description: res.message,
-            primaryButton: '확인',
-          });
-      });
+    saveKok({
+      kokId,
+      realEstateId,
+      kokConfig,
+      review,
+      outerOptions,
+      innerOptions,
+      contractOptions,
+      pictureData,
+    });
   };
 
   return (
@@ -205,7 +156,7 @@ export default function KokReview() {
                     ...prev,
                     [`${label}StarCount`]:
                       typeof starCount === 'function'
-                        ? starCount(prev[`${label}StarCount`] || 0) //동적 문자열로 하려고 하면 컴파일 시점에 해당 속성이 존재하는지 알수 없다.
+                        ? starCount(prev[`${label}StarCount`] || 0) //동적 문자열로 하려고 하면 컴파일 시점에 해당 속성이 존재하는지 알 수 없다.
                         : starCount,
                   }))
                 }
