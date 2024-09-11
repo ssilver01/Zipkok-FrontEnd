@@ -2,6 +2,7 @@ import React, { useEffect, useState } from 'react';
 import { useNavigate, useLocation } from 'react-router-dom';
 
 import { getKokReview, putKok, postKok } from 'apis';
+import { UserKokOption } from 'apis/user/getUserKokOption';
 import BottomBtn from 'components/BottomBtn';
 import StarRating from 'components/StarRating';
 import useModal from 'contexts/modalStore';
@@ -44,6 +45,16 @@ export default function KokReview() {
     reviewText: '',
   });
 
+  const prepareOptions = (options: UserKokOption[]) =>
+    options
+      .filter((option) => option.isVisible)
+      .map((option) => ({
+        optionId: option.optionId,
+        checkedDetailOptionIds: option.detailOptions
+          .filter((detailOption) => detailOption.detailOptionIsVisible)
+          .map((detail) => detail.detailOptionId),
+      }));
+
   const handleSave = async () => {
     if (kokConfig === undefined) return;
 
@@ -63,30 +74,9 @@ export default function KokReview() {
         []),
     ]);
 
-    const outerOptions = kokConfig.outerOptions
-      .filter((option) => option.isVisible)
-      .map((option) => ({
-        optionId: option.optionId,
-        checkedDetailOptionIds: option.detailOptions
-          .filter((detailOption) => detailOption.detailOptionIsVisible)
-          .map((detail) => detail.detailOptionId),
-      }));
-    const innerOptions = kokConfig.innerOptions
-      .filter((option) => option.isVisible)
-      .map((option) => ({
-        optionId: option.optionId,
-        checkedDetailOptionIds: option.detailOptions
-          .filter((detailOption) => detailOption.detailOptionIsVisible)
-          .map((detail) => detail.detailOptionId),
-      }));
-    const contractOptions = kokConfig.contractOptions
-      .filter((option) => option.isVisible)
-      .map((option) => ({
-        optionId: option.optionId,
-        checkedDetailOptionIds: option.detailOptions
-          .filter((detailOption) => detailOption.detailOptionIsVisible)
-          .map((detail) => detail.detailOptionId),
-      }));
+    const outerOptions = prepareOptions(kokConfig.outerOptions);
+    const innerOptions = prepareOptions(kokConfig.innerOptions);
+    const contractOptions = prepareOptions(kokConfig.contractOptions);
 
     // 새 콕 작성
     if (
