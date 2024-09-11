@@ -6,8 +6,8 @@ import useAddressStore from 'contexts/addressStore';
 import useUIStore from 'contexts/uiStore';
 import useAddressSearch from 'hooks/useAddressSearch';
 
-import RecentAddress from './components/RecentAddress';
 import styles from './Search.module.css';
+import RecentAddress from '../../../../components/home/search/RecentAddress';
 
 import type { Address } from 'interface/Address';
 

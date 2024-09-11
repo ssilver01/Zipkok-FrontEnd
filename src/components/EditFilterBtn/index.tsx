@@ -8,11 +8,7 @@ interface EditFilterBtnProps {
   onClick: () => void;
 }
 
-const EditFilterBtn: React.FC<EditFilterBtnProps> = ({
-  text,
-  isSelected,
-  onClick,
-}) => {
+const EditFilterBtn = ({ text, isSelected, onClick }: EditFilterBtnProps) => {
   const buttonStyle = isSelected ? styles.selected : styles.notSelected;
 
   return (

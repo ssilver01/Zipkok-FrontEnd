@@ -1,8 +1,10 @@
 import React, { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
 
+// import SearchIcon from '../../../../../assets/img/line(2)/search.svg';
+import SearchIcon from 'assets/img/line(2)/search.svg';
+
 import styles from './SearchBox.module.css';
-import SearchIcon from '../../../../../assets/img/line(2)/search.svg';
 
 export default function SearchBox() {
   const navigate = useNavigate();

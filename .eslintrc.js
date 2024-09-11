@@ -35,6 +35,7 @@ module.exports = {
   },
   plugins: ['import', '@typescript-eslint', 'prettier'],
   rules: {
+    '@typescript-eslint/no-explicit-any': 'off',
     'import/order': [
       'error',
       {

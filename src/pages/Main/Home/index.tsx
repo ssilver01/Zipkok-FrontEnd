@@ -6,6 +6,10 @@ import { getMapRealEstate } from 'apis';
 import { MapRealEstate } from 'apis/realestate/getMapRealEstate';
 import pinIcon from 'assets/img/pinIcon/pin.svg';
 import { PropertyItem, BottomSheet } from 'components';
+import HomeBottomSheet from 'components/home/home/BottomSheet';
+import Filter from 'components/home/home/Filter';
+import KakaoMap, { realEstateInfo } from 'components/home/home/KakaoMap';
+import SearchBox from 'components/home/home/SearchBox';
 import useAddressStore from 'contexts/addressStore';
 import useUIStore from 'contexts/uiStore';
 import useMyPageStore from 'contexts/useMyPageStore';
@@ -14,10 +18,7 @@ import convertPriceTypeToString from 'utils/convertPriceTypeToString';
 import getPriceString from 'utils/getPriceString';
 import isLoggedIn from 'utils/isLoggedIn';
 
-import HomeBottomSheet from './BottomSheet';
-import { Filter, SearchBox } from './components';
 import styles from './Home.module.css';
-import KakaoMap, { realEstateInfo } from './KakaoMap';
 
 import type { PinResult } from 'apis/pin/getPin';
 import type { Pin } from 'interface/Pin';

@@ -19,20 +19,20 @@ interface IconBtnProps {
   fontWeight?: string;
 }
 
-const IconBtn: React.FC<IconBtnProps> = ({
+const IconBtn = ({
   image,
   text,
   onClick,
-  layout = 'horizontal',
-  padding = '0',
-  height = 'auto',
-  gap = '8px',
-  color = '#000000',
-  fontFamily = 'Pretendard',
-  fontSize = '14px',
-  fontStyle = 'normal',
-  fontWeight = 'normal',
-}) => {
+  layout,
+  padding,
+  height,
+  gap,
+  color,
+  fontFamily,
+  fontSize,
+  fontStyle,
+  fontWeight,
+}: IconBtnProps) => {
   const style = {
     flexDirection: layout === 'horizontal' ? 'row' : 'column',
     padding,

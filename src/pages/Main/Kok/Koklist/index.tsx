@@ -8,12 +8,12 @@ import checkIcon from 'assets/img/line(2)/check.svg';
 import listIcon from 'assets/img/line(2)/list_default.svg';
 import { ReactComponent as PenIcon } from 'assets/img/line(2)/pen_white.svg';
 import { BottomBtn, PropertyItem } from 'components';
+import { realEstateInfo } from 'components/home/home/KakaoMap';
 import useCustomKokStore from 'contexts/customKokStore';
 import useUIStore from 'contexts/uiStore';
 import { StatusCode } from 'types/StatusCode';
 
 import styles from './Kok.module.css';
-import { realEstateInfo } from '../../Home/KakaoMap/index';
 
 export default function Koklist() {
   const ui = useUIStore();

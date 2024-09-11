@@ -8,7 +8,7 @@ interface StaticMapProps {
   lng?: number;
 }
 
-const StaticMap: React.FC<StaticMapProps> = ({ lat, lng }) => {
+const StaticMap = ({ lat, lng }: StaticMapProps) => {
   useEffect(() => {
     kakao.maps.load(() => {
       const mapContainer = document.getElementById('staticMap') as HTMLElement;

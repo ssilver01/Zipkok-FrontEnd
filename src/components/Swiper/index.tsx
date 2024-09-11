@@ -12,7 +12,7 @@ interface SwiperComProps {
   imageUrls?: string[];
   onClick?: () => void;
 }
-const SwiperCom: React.FC<SwiperComProps> = ({ imageUrls, onClick }) => {
+const SwiperCom = ({ imageUrls, onClick }: SwiperComProps) => {
   return (
     <Swiper
       pagination={{

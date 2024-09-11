@@ -4,8 +4,8 @@ import deleteIcon from 'assets/img/line(1)/delete.svg';
 
 import styles from './RecentAddress.module.css';
 
-import type { AddressHistory } from '../../';
 import type { Address } from 'interface/Address';
+import type { AddressHistory } from 'pages/Main/Home/Search';
 
 interface RecentAddressProps {
   history: AddressHistory;

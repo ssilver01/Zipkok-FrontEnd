@@ -8,7 +8,7 @@ interface IconTextProps {
   sizeText?: string | number;
 }
 
-const IconText: React.FC<IconTextProps> = ({ img, text, sizeText }) => {
+const IconText = ({ img, text, sizeText }: IconTextProps) => {
   return (
     <div className={styles.root}>
       <img src={img} />

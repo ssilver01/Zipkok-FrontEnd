@@ -57,7 +57,9 @@ const Swiper_modal: React.FC<modalProps> = ({
         </Swiper>
         <div className={styles.modalSwiper}>
           <Swiper
-            onSwiper={setThumbsSwiper}
+            onSwiper={() => {
+              setThumbsSwiper;
+            }}
             spaceBetween={10}
             slidesPerView={4}
             modules={[FreeMode, Thumbs, Pagination]}

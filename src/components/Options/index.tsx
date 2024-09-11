@@ -13,11 +13,11 @@ interface OptionsComponentProps {
   readOnly?: boolean;
 }
 
-const OptionsComponent: React.FC<OptionsComponentProps> = ({
+const OptionsComponent = ({
   kokOptions,
   setKokOptions,
   readOnly,
-}) => {
+}: OptionsComponentProps) => {
   return (
     <div className={styles.root}>
       {kokOptions.map((option) => (
