@@ -7,25 +7,12 @@ import BottomBtn from 'components/BottomBtn';
 import StarRating from 'components/StarRating';
 import useModal from 'contexts/modalStore';
 import useUIStore from 'contexts/uiStore';
+import Tags from 'model/Review';
 
 import styles from './KokReview.module.css';
 
 import type { KokConfigResult } from 'apis/kok/getKokConfig';
 import type { KokReview } from 'apis/kok/getKokReview';
-
-const Tags = [
-  '깔끔해요',
-  '조용해요',
-  '세련돼요',
-  '심플해요',
-  '더러워요',
-  '냄새나요',
-  '시끄러워요',
-  '좁아요',
-  '그냥 그래요',
-  '마음에 들어요',
-  '별로예요',
-];
 
 export default function KokReview() {
   const { state } = useLocation();
