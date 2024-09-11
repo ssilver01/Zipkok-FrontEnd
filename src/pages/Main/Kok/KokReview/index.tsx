@@ -30,6 +30,7 @@ const Tags = [
 export default function KokReview() {
   const { state } = useLocation();
   const { kokConfig } = state as { kokConfig: KokConfigResult };
+  const navigate = useNavigate();
 
   const realEstateId = new URLSearchParams(location.search).get('realEstateId');
   const kokId = new URLSearchParams(location.search).get('kokId');
@@ -37,14 +38,6 @@ export default function KokReview() {
 
   const ui = useUIStore();
   const modal = useModal();
-  const [review, setReview] = useState<KokReview>({
-    impressions: [],
-    facilityStarCount: 5,
-    infraStarCount: 5,
-    structureStarCount: 5,
-    vibeStarCount: 5,
-    reviewText: '',
-  });
 
   const prepareOptions = (options: UserKokOption[]) =>
     options
@@ -55,6 +48,32 @@ export default function KokReview() {
           .filter((detailOption) => detailOption.detailOptionIsVisible)
           .map((detail) => detail.detailOptionId),
       }));
+
+  const [review, setReview] = useState<KokReview>({
+    impressions: [],
+    facilityStarCount: 5,
+    infraStarCount: 5,
+    structureStarCount: 5,
+    vibeStarCount: 5,
+    reviewText: '',
+  });
+
+  useEffect(() => {
+    ui.setUI({
+      naviEnabled: false,
+      headerEnabled: true,
+      headerTitle: '발품 후기',
+      headerBackButtonEnabled: true,
+      headerRightButtons: [],
+      path: 'kok',
+    });
+
+    if (kokId) {
+      getKokReview(parseInt(kokId)).then((res) => {
+        setReview(res.result);
+      });
+    }
+  }, [kokId, ui]);
 
   const handleSave = async () => {
     if (kokConfig === undefined) return;
@@ -140,27 +159,6 @@ export default function KokReview() {
           });
       });
   };
-
-  useEffect(() => {
-    ui.setUI({
-      naviEnabled: false,
-      headerEnabled: true,
-      headerTitle: '발품 후기',
-      headerBackButtonEnabled: true,
-      headerRightButtons: [],
-      path: 'kok',
-    });
-  }, []);
-
-  useEffect(() => {
-    if (kokId === null || kokId === '') return;
-
-    getKokReview(parseInt(kokId)).then((res) => {
-      setReview(res.result);
-    });
-  }, [kokId]);
-
-  const navigate = useNavigate();
 
   return (
     <div className={styles.root}>
