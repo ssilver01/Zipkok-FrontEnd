@@ -8,11 +8,7 @@ interface RadioBtnProps {
   handleClick: () => void;
 }
 
-const RadioBtn: React.FC<RadioBtnProps> = ({
-  content,
-  isSelected,
-  handleClick,
-}) => {
+const RadioBtn = ({ content, isSelected, handleClick }: RadioBtnProps) => {
   const buttonStyle = isSelected ? styles.selected : styles.notSelected;
 
   return (

@@ -10,7 +10,7 @@ interface SwiperComProps {
   imageUrls?: string[];
   onClick?: () => void;
 }
-const SwiperItem: React.FC<SwiperComProps> = ({ imageUrls, onClick }) => {
+const SwiperItem = ({ imageUrls, onClick }: SwiperComProps) => {
   return (
     <Swiper
       className={styles.swiper}

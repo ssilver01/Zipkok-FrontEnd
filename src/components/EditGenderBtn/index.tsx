@@ -8,11 +8,7 @@ interface EditGenderBtnProps {
   onClick: () => void;
 }
 
-const EditGenderBtn: React.FC<EditGenderBtnProps> = ({
-  text,
-  isSelected,
-  onClick,
-}) => {
+const EditGenderBtn = ({ text, isSelected, onClick }: EditGenderBtnProps) => {
   const buttonStyle = isSelected ? styles.selected : styles.notSelected;
 
   return (

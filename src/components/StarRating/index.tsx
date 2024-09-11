@@ -14,12 +14,12 @@ interface StarRatingProps {
   readOnly?: boolean;
 }
 
-const StarRating: React.FC<StarRatingProps> = ({
+const StarRating = ({
   label,
   starCount,
   setStarCount,
   readOnly = false,
-}) => {
+}: StarRatingProps) => {
   const handleStarClick = (index: number): void => {
     if (!readOnly) {
       const newRating = index;
